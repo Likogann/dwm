@@ -2,10 +2,17 @@ dwm - dynamic window manager
 ============================
 dwm is an extremely fast, small, and dynamic window manager for X.
 
+Modifications
+------------
++ Gruvbox Theme
++ Patch awesomebar
++ Patch fullgaps
++ Patch warp
 
 Requirements
 ------------
 In order to build dwm you need the Xlib header files.
+Packages: feh build-essential libx11-dev libxinerama-dev sharutils suckless-tools libxft-dev stterm
 
 
 Installation
