@@ -1867,6 +1867,12 @@ tile(Monitor *m)
 	Client *c;
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
+	/* Remove gap if only 1 window is on screen */
+	if (n == 1)
+		m->gappx = 0;
+	else
+		m->gappx = gappx;
+
 	if (n == 0)
 		return;
 
