@@ -7,7 +7,9 @@ Modifications
 + Gruvbox Theme
 + Patch awesomebar
 + Patch fullgaps
+    - Set gaps to 0 when only one window is on screen
 + Patch warp
++ 
 
 Requirements
 ------------
