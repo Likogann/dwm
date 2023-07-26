@@ -13,6 +13,8 @@ static const char col_gray2[]       = "#504945";
 static const char col_gray3[]       = "#bdae93";
 static const char col_gray4[]       = "#ebdbb2";
 static const char col_cyan[]        = "#cc241d";
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -80,8 +82,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
