@@ -878,14 +878,11 @@ drawbar(Monitor *m)
 
 	if ((w = m->ww - tw - x) > bh) {
 		if (m->sel) {
-			/* mod.. Disable higlight active tag */
-//			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]); // Old
-			drw_setscheme(drw, scheme[SchemeNorm]); // New
-			/* ..mod */
+			drw_setscheme(drw, scheme[m == selmon ? SchemeSel : SchemeNorm]); // Old
 			drw_text(drw, x, 0, w, bh, lrpad / 2, m->sel->name, 0);
 			if (m->sel->isfloating)
 				drw_rect(drw, x + boxs, boxs, boxw, boxw, m->sel->isfixed, 0);
-
+		}
 		if (n > 0) {
 			int remainder = w % n;
 			int tabw = (1.0 / (double)n) * w + 1;
@@ -2480,6 +2477,29 @@ zoom(const Arg *arg)
 	pop(c);
 }
 
+//int
+//main(int argc, char *argv[])
+//{
+//	if (argc == 2 && !strcmp("-v", argv[1]))
+//		die("dwm-"VERSION);
+//	else if (argc != 1)
+//		die("usage: dwm [-v]");
+//	if (!setlocale(LC_CTYPE, "") || !XSupportsLocale())
+//		fputs("warning: no locale support\n", stderr);
+//	if (!(dpy = XOpenDisplay(NULL)))
+//		die("dwm: cannot open display");
+//	checkotherwm();
+//	setup();
+//#ifdef __OpenBSD__
+//	if (pledge("stdio rpath proc exec", NULL) == -1)
+//		die("pledge");
+//#endif /* __OpenBSD__ */
+//	scan();
+//	run();
+//	cleanup();
+//	XCloseDisplay(dpy);
+//	return EXIT_SUCCESS;
+//}
 int
 main(int argc, char *argv[])
 {
