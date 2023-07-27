@@ -26,6 +26,18 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "", "", "", "", ""};
 
+static const char *tagsel[][2][2] = {
+	{ { "#ebdbb2", col_gray1 }, { "#ebdbb2", col_gray1 } },
+	{ { "#fe8019", col_gray1 }, { "#fe8019", col_gray1 } },
+	{ { "#b8bb26", col_gray1 }, { "#b8bb26", col_gray1 } },
+	{ { "#d3869b", col_gray1 }, { "#d3869b", col_gray1 } },
+	{ { "#fb4934", col_gray1 }, { "#fb4934", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+};
+
 static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */

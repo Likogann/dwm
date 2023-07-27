@@ -1852,9 +1852,9 @@ setup(void)
 	/* init appearance */
 	if (LENGTH(tags) > LENGTH(tagsel))
 		die("to few color schemes for the tags");
-	scheme = ecalloc(LENGTH(colors), sizeof(Clr *));
-//	scheme = ecalloc(LENGTH(colors) + 1, sizeof(Clr *));          // merge: patch.rainbowtags
-//	scheme[LENGTH(colors)] = drw_scm_create(drw, colors[0], 3);   // ^^^^
+//	scheme = ecalloc(LENGTH(colors), sizeof(Clr *));
+	scheme = ecalloc(LENGTH(colors) + 1, sizeof(Clr *));          // merge: patch.rainbowtags
+	scheme[LENGTH(colors)] = drw_scm_create(drw, colors[0], 3);   // ^^^^
 	for (i = 0; i < LENGTH(colors); i++)
 		scheme[i] = drw_scm_create(drw, colors[i], 3);
 	tagschemenorm = ecalloc(LENGTH(tagsel), sizeof(Clr *));
