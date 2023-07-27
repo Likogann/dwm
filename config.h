@@ -24,15 +24,15 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const char *tagsel[][2][2] = {
 	/*      norm                          sel       */
 	/*  fg          bg              fg          bg  */
-	{ { col_gray3, col_gray1 }, { "#ffffff", "#ff0000" } },
-	{ { col_gray3, col_gray1 }, { "#ffffff", "#ff7f00" } },
-	{ { col_gray3, col_gray1 }, { "#000000", "#ffff00" } },
-	{ { col_gray3, col_gray1 }, { "#000000", "#00ff00" } },
-	{ { col_gray3, col_gray1 }, { "#ffffff", "#0000ff" } },
-	{ { col_gray3, col_gray1 }, { "#ffffff", "#4b0082" } },
-	{ { col_gray3, col_gray1 }, { "#ffffff", "#9400d3" } },
-	{ { col_gray3, col_gray1 }, { "#000000", "#ffffff" } },
-	{ { col_gray3, col_gray1 }, { "#ffffff", "#000000" } },
+	{ { "#ebdbb2", col_gray1 }, { "#ebdbb2", col_gray1 } },
+	{ { "#fe8019", col_gray1 }, { "#fe8019", col_gray1 } },
+	{ { "#b8bb26", col_gray1 }, { "#b8bb26", col_gray1 } },
+	{ { "#d3869b", col_gray1 }, { "#d3869b", col_gray1 } },
+	{ { "#fb4934", col_gray1 }, { "#fb4934", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
 };
 
 static const Rule rules[] = {
