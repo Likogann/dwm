@@ -1825,7 +1825,7 @@ setup(void)
 	if (!drw_fontset_create(drw, fonts, LENGTH(fonts)))
 		die("no fonts could be loaded.");
 	lrpad = drw->fonts->h;
-	bh = drw->fonts->h + 8;
+	bh = drw->fonts->h + 10;
 	sp = sidepad;
 	vp = (topbar == 1) ? vertpad : - vertpad;
 	updategeom();
@@ -2003,12 +2003,13 @@ tile(Monitor *m)
 	Client *c;
 
 	for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++);
-	/* Remove gap if only 1 window is on screen */
+	/* Remove gap if only 1 window is on screen */ // i no longer want this
+	/*
 	if (n == 1)
 		m->gappx = 0;
 	else
 		m->gappx = gappx;
-
+	*/
 	if (n == 0)
 		return;
 
