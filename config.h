@@ -2,14 +2,14 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const int vertpad            = 10;       /* vertical padding of bar */
-static const int sidepad            = 10;       /* horizontal padding of bar */
 static const unsigned int gappx     = 5;        /* gaps between windows */
+static const int vertpad            = gappx;       /* vertical padding of bar */
+static const int sidepad            = gappx;       /* horizontal padding of bar */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "FontAwesome:size=11", "monospace:size=11" };
+static const char dmenufont[]       = "monospace:size=11";
 static const char col_gray1[]       = "#282828";
 static const char col_gray2[]       = "#504945";
 static const char col_gray3[]       = "#bdae93";
@@ -25,6 +25,18 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", ""};
+
+static const char *tagsel[][2][2] = {
+	{ { "#ebdbb2", col_gray1 }, { "#ebdbb2", col_gray1 } },
+	{ { "#fe8019", col_gray1 }, { "#fe8019", col_gray1 } },
+	{ { "#b8bb26", col_gray1 }, { "#b8bb26", col_gray1 } },
+	{ { "#d3869b", col_gray1 }, { "#d3869b", col_gray1 } },
+	{ { "#fb4934", col_gray1 }, { "#fb4934", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
+};
 
 static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
