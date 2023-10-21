@@ -87,6 +87,8 @@ static const char *lockcmd[]   = { "slock", NULL };
 static const char *volup[]     = { "pactl", "set-sink-volume", "0", "+5%",       NULL };
 static const char *voldown[]   = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *playpause[] = { "playerctl", "play-pause",              NULL };
+static const char *playnext[]  = { "playerctl", "next",                    NULL };
+static const char *playprev[]  = { "playerctl", "previous",                NULL };
 
 #include <X11/XF86keysym.h>
 static const Key keys[] = {
@@ -130,6 +132,8 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,        {.v = volup     } },
 	{ 0,                            XF86XK_AudioLowerVolume,   spawn,        {.v = voldown   } },
 	{ 0,                            XF86XK_AudioPlay,          spawn,        {.v = playpause } },
+	{ 0,                            XF86XK_AudioNext,          spawn,        {.v = playnext } },
+	{ 0,                            XF86XK_AudioPrev,          spawn,        {.v = playprev } },
 	// Tag keys */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
