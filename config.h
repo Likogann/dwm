@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
   };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", ""};
+static const char *tags[] = { "", "", "", "", "", "", "" };
 
 static const char *tagsel[][2][2] = {
 	{ { "#ebdbb2", col_gray1 }, { "#ebdbb2", col_gray1 } },
