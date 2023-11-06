@@ -24,15 +24,15 @@ static const char *colors[][3]      = {
   };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "" };
 
 static const char *tagsel[][2][2] = {
 	{ { "#ebdbb2", col_gray1 }, { "#ebdbb2", col_gray1 } },
 	{ { "#fe8019", col_gray1 }, { "#fe8019", col_gray1 } },
 	{ { "#b8bb26", col_gray1 }, { "#b8bb26", col_gray1 } },
 	{ { "#d3869b", col_gray1 }, { "#d3869b", col_gray1 } },
+	{ { "#fabd2f", col_gray1 }, { "#fabd2f", col_gray1 } },
 	{ { "#fb4934", col_gray1 }, { "#fb4934", col_gray1 } },
-	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
 	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
 	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
 	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
@@ -50,7 +50,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Spotify",  NULL,       NULL,       1 << 2,       0,            1 },
+	{ "librewolf-default",NULL,NULL,      1 << 1,       0,            1 },
+	{ "discord",  NULL,       NULL,       1 << 0,       0,            1 },
+	{ "pulseeffects",NULL,    NULL,       1 << 2,       0,            0 },
+	{ "pavucontrol",NULL,     NULL,       1 << 2,       0,            0 },
 };
 
 /* layout(s) */
