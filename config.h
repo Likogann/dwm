@@ -24,15 +24,15 @@ static const char *colors[][3]      = {
   };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", ""};
+static const char *tags[] = { "", "", "", "", "", "" };
 
 static const char *tagsel[][2][2] = {
 	{ { "#ebdbb2", col_gray1 }, { "#ebdbb2", col_gray1 } },
 	{ { "#fe8019", col_gray1 }, { "#fe8019", col_gray1 } },
 	{ { "#b8bb26", col_gray1 }, { "#b8bb26", col_gray1 } },
 	{ { "#d3869b", col_gray1 }, { "#d3869b", col_gray1 } },
+	{ { "#fabd2f", col_gray1 }, { "#fabd2f", col_gray1 } },
 	{ { "#fb4934", col_gray1 }, { "#fb4934", col_gray1 } },
-	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
 	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
 	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
 	{ { "#ffffff", col_gray1 }, { "#ffffff", col_gray1 } },
@@ -50,7 +50,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Spotify",  NULL,       NULL,       1 << 2,       0,            1 },
+	{ "librewolf-default",NULL,NULL,      1 << 1,       0,            1 },
+	{ "discord",  NULL,       NULL,       1 << 0,       0,            1 },
+	{ "pulseeffects",NULL,    NULL,       1 << 2,       0,            0 },
+	{ "pavucontrol",NULL,     NULL,       1 << 2,       0,            0 },
 };
 
 /* layout(s) */
@@ -87,6 +91,8 @@ static const char *lockcmd[]   = { "slock", NULL };
 static const char *volup[]     = { "pactl", "set-sink-volume", "0", "+5%",       NULL };
 static const char *voldown[]   = { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *playpause[] = { "playerctl", "play-pause",              NULL };
+static const char *playnext[]  = { "playerctl", "next",                    NULL };
+static const char *playprev[]  = { "playerctl", "previous",                NULL };
 
 #include <X11/XF86keysym.h>
 static const Key keys[] = {
@@ -130,6 +136,8 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,   spawn,        {.v = volup     } },
 	{ 0,                            XF86XK_AudioLowerVolume,   spawn,        {.v = voldown   } },
 	{ 0,                            XF86XK_AudioPlay,          spawn,        {.v = playpause } },
+	{ 0,                            XF86XK_AudioNext,          spawn,        {.v = playnext } },
+	{ 0,                            XF86XK_AudioPrev,          spawn,        {.v = playprev } },
 	// Tag keys */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
