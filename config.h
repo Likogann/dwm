@@ -87,9 +87,12 @@ static const char *dmenucmd[]  = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont
 // Apps
 static const char *termcmd[]   = { "st", NULL };
 static const char *lockcmd[]   = { "slock", NULL };
-// Commands */
-static const char *volup[]     = { "pactl", "set-sink-volume", "0", "+5%",       NULL };
+// System
+static const char *volup[]     = { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *voldown[]   = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *brghtup[]   = { "brightnessctl", "set", "+10",          NULL };
+static const char *brghtdn[]   = { "brightnessctl", "set", "10-",          NULL };
+// Media
 static const char *playpause[] = { "playerctl", "play-pause",              NULL };
 static const char *playnext[]  = { "playerctl", "next",                    NULL };
 static const char *playprev[]  = { "playerctl", "previous",                NULL };
@@ -138,6 +141,9 @@ static const Key keys[] = {
 	{ 0,                            XF86XK_AudioPlay,          spawn,        {.v = playpause } },
 	{ 0,                            XF86XK_AudioNext,          spawn,        {.v = playnext } },
 	{ 0,                            XF86XK_AudioPrev,          spawn,        {.v = playprev } },
+	{ 0,                            XF86XK_MonBrightnessUp,    spawn,        {.v = brghtup  } },
+        { 0,                            XF86XK_MonBrightnessDown,  spawn,        {.v = brghtdn  } },
+
 	// Tag keys */
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
